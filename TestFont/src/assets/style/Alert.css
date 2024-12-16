@@ -1,0 +1,49 @@
+.alert {
+  position: fixed;
+  top: 10px; /* Initial position (offscreen) */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 9999;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+  color: white;
+}
+
+.alert-success {
+  background-color: #4caf50; /* Green */
+}
+
+.alert-error {
+  background-color: #f44336; /* Red */
+}
+
+.alert-info {
+  background-color: #2196f3; /* Blue */
+}
+
+.alert-warning {
+  background-color: #ff9800; /* Orange */
+}
+
+/* Hidden state for exit transition */
+.alert.hide {
+  top: -50px;
+  opacity: 0;
+}
+
+/* Close button */
+.alert-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  cursor: pointer;
+}

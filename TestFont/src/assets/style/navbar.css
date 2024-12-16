@@ -1,0 +1,77 @@
+/* Style de la barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C3E50; /* Couleur de fond de la navbar */
+    padding: 10px 20px;
+    position: sticky; /* La navbar reste en haut lorsque l'utilisateur défile */
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo ou titre de la navbar */
+  .navbar .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  
+  /* Liste des éléments de la navigation */
+  .navbar .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Style des liens dans la navbar */
+  .navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  /* Effet de survol des liens */
+  .navbar .nav-links a:hover {
+    color: #3498db; /* Couleur au survol */
+  }
+  
+  /* Le menu burger pour les petits écrans */
+  .navbar .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Pour les petits écrans (responsive) */
+  @media (max-width: 768px) {
+    .navbar .nav-links {
+      display: none; /* Masquer les liens de navigation sur petits écrans */
+      flex-direction: column;
+      gap: 15px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #34495E;
+      border-radius: 8px;
+      padding: 20px;
+    }
+  
+    .navbar .nav-links.active {
+      display: flex; /* Afficher les liens lorsqu'ils sont activés */
+    }
+  
+    .navbar .hamburger {
+      display: block;
+      color: white;
+      font-size: 30px;
+    }
+  
+    .navbar .nav-links a {
+      font-size: 20px;
+    }
+  }
+  
